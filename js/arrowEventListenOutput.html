@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing JS</title>
+</head>
+
+<body style="color: white; background-color: black;">
+
+    <input id="textBox" type="text"></input>
+    <div id="output"></div>
+
+    <script>
+        let textBox = document.querySelector("#textBox"),
+            output = document.querySelector("#output");
+
+        textBox.addEventListener('keydown', event =>
+            output.textContent = `Key pressed ${event.key}`);
+    </script>
+
+</body>
+
+</html>
