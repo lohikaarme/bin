@@ -4,9 +4,12 @@ def fetch_page(url)
 end
 
 def count_image_tags(page, tag)
-    pattern = /<#{tag}\b/   
-    tags = page.scan(pattern)
-    return tags.length
+    # pattern = /<#{tag}\b/   
+    # tags = page.scan(pattern)
+    # return tags.length
+
+    page.scan(/<#{tag}\b/).length
+
 end
 
 sites = [ "http://www.wsj.com", "http://www.nytimes.com", "http://www.ft.com" ]
